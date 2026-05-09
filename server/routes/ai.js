@@ -2,13 +2,18 @@ const express = require('express');
 const router = express.Router();
 const claude = require('../services/claudeService');
 
+function aiError(err) {
+  if (err.message?.includes('credit balance')) return 'AI unavailable: insufficient Anthropic credits. Add credits at console.anthropic.com.';
+  return err.message;
+}
+
 router.post('/followup', async (req, res) => {
   try {
     const { engagement_type, stage, days_since_update, client_side_updates } = req.body;
     const message = await claude.generateFollowUp({ engagement_type, stage, days_since_update, client_side_updates });
     res.json({ message });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.json({ message: null, error: aiError(err) });
   }
 });
 
@@ -18,7 +23,7 @@ router.post('/executive-summary', async (req, res) => {
     const summary = await claude.generateExecutiveSummary({ engagement_type, tier, context });
     res.json({ summary });
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.json({ summary: null, error: aiError(err) });
   }
 });
 
@@ -28,7 +33,7 @@ router.post('/incident-scope', async (req, res) => {
     const result = await claude.generateIncidentScope(incident_description);
     res.json(result);
   } catch (err) {
-    res.status(500).json({ error: err.message });
+    res.json({ objectives: [], scope: [], error: aiError(err) });
   }
 });
 
@@ -49,13 +54,19 @@ router.post('/chase-stale', async (req, res) => {
       const days = Math.floor(
         (Date.now() - new Date(opp.date_updated || opp.created_at).getTime()) / 86400000
       );
-      const message = await claude.generateFollowUp({
-        engagement_type: opp.engagement_type,
-        stage: opp.stage,
-        days_since_update: days,
-        client_side_updates: opp.client_side_updates,
-      });
-      return { opportunity: opp, message, days };
+      let message = null;
+      let error = null;
+      try {
+        message = await claude.generateFollowUp({
+          engagement_type: opp.engagement_type,
+          stage: opp.stage,
+          days_since_update: days,
+          client_side_updates: opp.client_side_updates,
+        });
+      } catch (err) {
+        error = aiError(err);
+      }
+      return { opportunity: opp, message, error, days };
     }));
 
     res.json(results);

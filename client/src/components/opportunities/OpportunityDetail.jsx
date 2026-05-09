@@ -39,7 +39,7 @@ export default function OpportunityDetail({ opp, onClose, onUpdate }) {
       }),
     })
     const data = await res.json()
-    setAiMsg(data.message || '')
+    setAiMsg(data.message || data.error || 'No message returned.')
     setGenLoading(false)
   }
 

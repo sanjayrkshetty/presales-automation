@@ -52,7 +52,7 @@ export default function ProposalWizard({ opportunity, onClose }) {
       }),
     })
     const data = await res.json()
-    set('executive_summary', data.summary || '')
+    set('executive_summary', data.summary || (data.error ? `[AI Error: ${data.error}]` : ''))
     setAiLoading(false)
   }
 
@@ -75,7 +75,6 @@ export default function ProposalWizard({ opportunity, onClose }) {
     setResult(data)
     setPropNum(data.proposal_number)
     setGenerating(false)
-    setStep(4)
   }
 
   const billingGam = gams.find(g => g.id === parseInt(form.billing_contact_id))
