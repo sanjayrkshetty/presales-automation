@@ -22,6 +22,9 @@ router.get('/', (req, res) => {
   res.json(proposals);
 });
 
+const VALID_PROPOSAL_TYPES = ['IFI', 'Retainer', 'BAS', 'CA', 'PFI', 'ATM', 'Deep and Dark Web', 'Other'];
+const VALID_TIERS = ['Essential', 'Enterprise', 'Elite', ''];
+
 router.post('/generate', async (req, res) => {
   try {
     const db = getDb(req);
@@ -30,9 +33,16 @@ router.post('/generate', async (req, res) => {
       executive_summary, incident_description, billing_contact_id,
     } = req.body;
 
-    if (!client_name || !proposal_type) {
-      return res.status(400).json({ error: 'client_name and proposal_type required' });
-    }
+    if (!client_name || typeof client_name !== 'string' || !client_name.trim())
+      return res.status(400).json({ error: 'client_name required' });
+    if (!proposal_type || !VALID_PROPOSAL_TYPES.includes(proposal_type))
+      return res.status(400).json({ error: `proposal_type must be one of: ${VALID_PROPOSAL_TYPES.join(', ')}` });
+    if (tier && !VALID_TIERS.includes(tier))
+      return res.status(400).json({ error: `tier must be one of: Essential, Enterprise, Elite` });
+    if (client_name.length > 200)
+      return res.status(400).json({ error: 'client_name too long (max 200 chars)' });
+    if (executive_summary && executive_summary.length > 5000)
+      return res.status(400).json({ error: 'executive_summary too long (max 5000 chars)' });
 
     const proposal_number = getNextProposalNumber(db, proposal_type);
 

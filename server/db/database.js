@@ -77,11 +77,11 @@ function seedGam(db) {
     'INSERT INTO gam (name, designation, email, phone, region) VALUES (?, ?, ?, ?, ?)'
   );
   const gams = [
-    ['Vijay Ranga Babu', 'Account Manager', 'vijay.rb@company.com', '+91 98765 43210', 'India'],
-    ['Himanshu Chouhan', 'Account Manager', 'himanshu.c@company.com', '+91 87654 32109', 'MEE'],
-    ['Abhijeet Singh', 'Director - Sales', 'abhijeet.s@company.com', '+91 99000 62038', 'India'],
-    ['Mukesh H Khanwani', 'Account Manager', 'mukesh.k@company.com', '+91 76543 21098', 'SEA'],
-    ['Prathima K J', 'Account Manager', 'prathima.kj@company.com', '+91 65432 10987', 'MEE'],
+    ['Alex Mercer', 'Account Manager', 'alex.m@testorg.example', '+91 90000 10001', 'India'],
+    ['Sara Lindqvist', 'Account Manager', 'sara.l@testorg.example', '+971 50 000 1002', 'MEE'],
+    ['David Okafor', 'Director - Sales', 'david.o@testorg.example', '+91 90000 10003', 'India'],
+    ['James Tan', 'Account Manager', 'james.t@testorg.example', '+65 9000 1004', 'SEA'],
+    ['Nadia Khalil', 'Account Manager', 'nadia.k@testorg.example', '+971 50 000 1005', 'MEE'],
   ];
   gams.forEach(g => insert.run(...g));
 }
@@ -96,16 +96,16 @@ function seedOpportunities(db) {
   `);
 
   const opps = [
-    ['Regional Bank A', 'IFI', 'Hot', 'Vijay Ranga Babu', 0.45, 1, 'Proposal submitted, awaiting review.', 'Client reviewing internally.'],
-    ['Insurance Co B', 'Retainer', 'Warm', 'Himanshu Chouhan', 1.2, 1, 'Proposal shared, follow-up scheduled.', 'Budget approval pending.'],
-    ['Fintech Corp C', 'CA', 'Cold', 'Mukesh H Khanwani', 0, 0, 'Initial discovery call done.', ''],
-    ['Payments Ltd D', 'BAS', 'Won', 'Abhijeet Singh', 0.8, 1, 'PO received.', 'Contract signed.'],
-    ['Gulf Bank E', 'PFI', 'Hot', 'Prathima K J', 0.3, 1, 'Scoping call completed.', 'Awaiting legal sign-off.'],
-    ['Telecom Group F', 'IFI', 'Warm', 'Vijay Ranga Babu', 0.6, 0, 'RFP received, working on response.', 'Procurement involved.'],
-    ['NBFCorp G', 'ATM', 'Cold', 'Himanshu Chouhan', 0, 0, 'Lead from conference, yet to qualify.', ''],
-    ['Retail Chain H', 'BAS', 'Warm', 'Mukesh H Khanwani', 0.5, 1, 'Demo completed successfully.', 'Technical evaluation in progress.'],
-    ['HealthTech I', 'Retainer', 'Lost', 'Abhijeet Singh', 0, 0, 'Lost to competitor on price.', 'Went with cheaper vendor.'],
-    ['Logistics Ltd J', 'CA', 'Hot', 'Prathima K J', 0.35, 1, 'Verbal yes from CISO.', 'Paper work in progress.'],
+    ['Test Bank Alpha', 'IFI', 'Hot', 'Alex Mercer', 0.45, 1, 'Proposal submitted, awaiting review.', 'Client reviewing internally.'],
+    ['Test Insurance Beta', 'Retainer', 'Warm', 'Sara Lindqvist', 1.2, 1, 'Proposal shared, follow-up scheduled.', 'Budget approval pending.'],
+    ['Test Fintech Gamma', 'CA', 'Cold', 'James Tan', 0, 0, 'Initial discovery call done.', ''],
+    ['Test Payments Delta', 'BAS', 'Won', 'David Okafor', 0.8, 1, 'PO received.', 'Contract signed.'],
+    ['Test Gulf Bank Epsilon', 'PFI', 'Hot', 'Nadia Khalil', 0.3, 1, 'Scoping call completed.', 'Awaiting legal sign-off.'],
+    ['Test Telecom Zeta', 'IFI', 'Warm', 'Alex Mercer', 0.6, 0, 'RFP received, working on response.', 'Procurement involved.'],
+    ['Test NBFC Eta', 'ATM', 'Cold', 'Sara Lindqvist', 0, 0, 'Lead from conference, yet to qualify.', ''],
+    ['Test Retail Theta', 'BAS', 'Warm', 'James Tan', 0.5, 1, 'Demo completed successfully.', 'Technical evaluation in progress.'],
+    ['Test HealthTech Iota', 'Retainer', 'Lost', 'David Okafor', 0, 0, 'Lost to competitor on price.', 'Went with cheaper vendor.'],
+    ['Test Logistics Kappa', 'CA', 'Hot', 'Nadia Khalil', 0.35, 1, 'Verbal yes from CISO.', 'Paperwork in progress.'],
   ];
   opps.forEach(o => insert.run(...o));
 }

@@ -2,7 +2,24 @@ const express = require('express');
 const multer = require('multer');
 const XLSX = require('xlsx');
 const router = express.Router();
-const upload = multer({ storage: multer.memoryStorage() });
+
+// File upload: 5MB max, xlsx/xls only
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 5 * 1024 * 1024 },
+  fileFilter: (req, file, cb) => {
+    const ok = /\.(xlsx|xls)$/i.test(file.originalname);
+    cb(ok ? null : new Error('Only .xlsx/.xls files allowed'), ok);
+  },
+});
+
+const VALID_STAGES = ['Hot', 'Warm', 'Cold', 'Won', 'Lost'];
+const VALID_TYPES = ['IFI', 'Retainer', 'CA', 'BAS', 'PFI', 'ATM', 'Deep and Dark Web', 'Other', 'Custom'];
+
+function sanitizeStr(v, maxLen = 500) {
+  if (v == null) return null;
+  return String(v).slice(0, maxLen).replace(/[<>]/g, '');
+}
 
 function getDb(req) { return req.app.locals.db; }
 
@@ -39,7 +56,14 @@ router.post('/', (req, res) => {
   const { client_name, presales_update, account_manager, engagement_type,
     proposal_shared, acv_cr, stage, client_side_updates } = req.body;
 
-  if (!client_name) return res.status(400).json({ error: 'client_name required' });
+  if (!client_name || typeof client_name !== 'string' || !client_name.trim())
+    return res.status(400).json({ error: 'client_name required' });
+  if (stage && !VALID_STAGES.includes(stage))
+    return res.status(400).json({ error: `stage must be one of: ${VALID_STAGES.join(', ')}` });
+  if (engagement_type && !VALID_TYPES.includes(engagement_type))
+    return res.status(400).json({ error: `engagement_type must be one of: ${VALID_TYPES.join(', ')}` });
+  if (acv_cr != null && (isNaN(parseFloat(acv_cr)) || parseFloat(acv_cr) < 0))
+    return res.status(400).json({ error: 'acv_cr must be a non-negative number' });
 
   const result = db.prepare(`
     INSERT INTO opportunities (client_name, presales_update, account_manager, engagement_type,
@@ -114,7 +138,14 @@ router.post('/bulk-proposal-shared', (req, res) => {
   res.json({ ok: true, updated: ids.length });
 });
 
-router.post('/import', upload.single('file'), (req, res) => {
+router.post('/import', (req, res, next) => {
+  upload.single('file')(req, res, (err) => {
+    if (err) return next(err);
+    handleImport(req, res);
+  });
+});
+
+async function handleImport(req, res) {
   try {
     const wb = XLSX.read(req.file.buffer, { type: 'buffer' });
     const ws = wb.Sheets[wb.SheetNames[0]];
@@ -157,6 +188,6 @@ router.post('/import', upload.single('file'), (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
-});
+}
 
 module.exports = router;
