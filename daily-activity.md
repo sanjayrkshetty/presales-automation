@@ -13,3 +13,9 @@ Auto-generated daily activity tracker.
 **Focus:** DFIR retainer renewal — review SLA response times and escalation paths with client.
 
 **Insight:** Gradient-based attacks (PGD, FGSM) on vision-language models can bypass safety classifiers.
+
+## 2026-05-12
+
+**Focus:** Red team scoping — define crown jewels, OOB comms channel, abort criteria.
+
+**Insight:** Shadow alignment: uncensored behavior activated by specific prompt patterns post-RLHF.
