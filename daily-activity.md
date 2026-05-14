@@ -19,3 +19,9 @@ Auto-generated daily activity tracker.
 **Focus:** Red team scoping — define crown jewels, OOB comms channel, abort criteria.
 
 **Insight:** Shadow alignment: uncensored behavior activated by specific prompt patterns post-RLHF.
+
+## 2026-05-14
+
+**Focus:** PCI DSS v4.0 SAQ eligibility review — confirm card data environment scope before pricing.
+
+**Insight:** Model collapse in iterative training on synthetic data — diversity decay over generations.
