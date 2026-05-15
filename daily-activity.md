@@ -25,3 +25,9 @@ Auto-generated daily activity tracker.
 **Focus:** PCI DSS v4.0 SAQ eligibility review — confirm card data environment scope before pricing.
 
 **Insight:** Model collapse in iterative training on synthetic data — diversity decay over generations.
+
+## 2026-05-15
+
+**Focus:** ISO 27001 gap assessment scoping — map controls to client maturity level.
+
+**Insight:** Multi-agent coordination attacks: one compromised agent poisons shared context window.
