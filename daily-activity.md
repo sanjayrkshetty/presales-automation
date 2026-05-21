@@ -31,3 +31,9 @@ Auto-generated daily activity tracker.
 **Focus:** ISO 27001 gap assessment scoping — map controls to client maturity level.
 
 **Insight:** Multi-agent coordination attacks: one compromised agent poisons shared context window.
+
+## 2026-05-21
+
+**Focus:** ISO 27001 gap assessment scoping — map controls to client maturity level.
+
+**Insight:** Synthetic data laundering: train on AI-generated data to remove data lineage — legal grey area.
