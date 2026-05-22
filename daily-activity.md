@@ -37,3 +37,9 @@ Auto-generated daily activity tracker.
 **Focus:** ISO 27001 gap assessment scoping — map controls to client maturity level.
 
 **Insight:** Synthetic data laundering: train on AI-generated data to remove data lineage — legal grey area.
+
+## 2026-05-22
+
+**Focus:** ISO 27001 gap assessment scoping — map controls to client maturity level.
+
+**Insight:** Synthetic data laundering: train on AI-generated data to remove data lineage — legal grey area.
