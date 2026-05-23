@@ -43,3 +43,9 @@ Auto-generated daily activity tracker.
 **Focus:** ISO 27001 gap assessment scoping — map controls to client maturity level.
 
 **Insight:** Synthetic data laundering: train on AI-generated data to remove data lineage — legal grey area.
+
+## 2026-05-23
+
+**Focus:** Pen testing proposal review — verify rules of engagement, IP ranges, exclusions documented.
+
+**Insight:** Few-shot jailbreak: 3-5 examples of 'compliant' harmful responses break alignment reliably.
