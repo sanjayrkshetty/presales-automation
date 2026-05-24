@@ -49,3 +49,9 @@ Auto-generated daily activity tracker.
 **Focus:** Pen testing proposal review — verify rules of engagement, IP ranges, exclusions documented.
 
 **Insight:** Few-shot jailbreak: 3-5 examples of 'compliant' harmful responses break alignment reliably.
+
+## 2026-05-24
+
+**Focus:** SOC 2 Type II readiness — confirm observation period start date in engagement letter.
+
+**Insight:** LLM memorization scales with model size — GPT-4 class models memorize more training verbatim.
