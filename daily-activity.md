@@ -55,3 +55,9 @@ Auto-generated daily activity tracker.
 **Focus:** SOC 2 Type II readiness — confirm observation period start date in engagement letter.
 
 **Insight:** LLM memorization scales with model size — GPT-4 class models memorize more training verbatim.
+
+## 2026-05-25
+
+**Focus:** DFIR retainer renewal — review SLA response times and escalation paths with client.
+
+**Insight:** Context window poisoning: long-context models are more susceptible to late-turn instruction hijack.
