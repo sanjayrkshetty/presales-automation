@@ -61,3 +61,9 @@ Auto-generated daily activity tracker.
 **Focus:** DFIR retainer renewal — review SLA response times and escalation paths with client.
 
 **Insight:** Context window poisoning: long-context models are more susceptible to late-turn instruction hijack.
+
+## 2026-05-27
+
+**Focus:** Discovery call prep — qualify budget authority, timeline, and trigger event before scoping.
+
+**Insight:** Multimodal attack surface: images can encode adversarial text instructions invisible to humans.
