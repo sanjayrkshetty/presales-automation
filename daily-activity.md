@@ -67,3 +67,9 @@ Auto-generated daily activity tracker.
 **Focus:** Discovery call prep — qualify budget authority, timeline, and trigger event before scoping.
 
 **Insight:** Multimodal attack surface: images can encode adversarial text instructions invisible to humans.
+
+## 2026-05-28
+
+**Focus:** PCI DSS v4.0 SAQ eligibility review — confirm card data environment scope before pricing.
+
+**Insight:** Differential privacy in LLM training: ε=8 provides weak protection, ε=1 kills utility.
