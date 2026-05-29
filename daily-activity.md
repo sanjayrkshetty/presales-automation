@@ -73,3 +73,9 @@ Auto-generated daily activity tracker.
 **Focus:** PCI DSS v4.0 SAQ eligibility review — confirm card data environment scope before pricing.
 
 **Insight:** Differential privacy in LLM training: ε=8 provides weak protection, ε=1 kills utility.
+
+## 2026-05-29
+
+**Focus:** ISO 27001 gap assessment scoping — map controls to client maturity level.
+
+**Insight:** Threat modeling LLM systems: STRIDE doesn't map cleanly — need LLM-specific threat taxonomy.
