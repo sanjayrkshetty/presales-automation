@@ -79,3 +79,9 @@ Auto-generated daily activity tracker.
 **Focus:** ISO 27001 gap assessment scoping — map controls to client maturity level.
 
 **Insight:** Threat modeling LLM systems: STRIDE doesn't map cleanly — need LLM-specific threat taxonomy.
+
+## 2026-05-30
+
+**Focus:** Pen testing proposal review — verify rules of engagement, IP ranges, exclusions documented.
+
+**Insight:** Prompt injection remains #1 OWASP LLM risk — indirect injection via RAG sources is underdetected.
