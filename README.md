@@ -1,3 +1,18 @@
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Pre-Sales%20Automation&fontSize=38&fontColor=fff&animation=twinkling&fontAlignY=38&desc=Full-Stack%20DFIR%20Pre-Sales%20Tool%20%7C%20AI%20Proposals%20%7C%20Pipeline%20Tracker&descAlignY=58&descSize=15" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/sanjayrkshetty"><img src="https://img.shields.io/badge/by-@sanjayrkshetty-7C3AED?style=flat-square&logo=github&logoColor=white" /></a>
+  &nbsp;
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Anthropic%20Claude-D4A843?style=flat-square" />
+</p>
+
+---
+
 # Pre-Sales Automation System v3
 
 Full-stack pre-sales pipeline tracker and DOCX proposal generator for SISA DFIR.
@@ -96,3 +111,23 @@ Sheet headers (exact match required):
 
 | Client Name | Pre-Sales Update | Account Manager | Engagement Type | Proposal Shared | ACV (Cr) | Stage | Client Side Updates |
 |---|---|---|---|---|---|---|---|
+
+---
+
+<p align="center">
+  Part of <a href="https://github.com/sanjayrkshetty"><strong>@sanjayrkshetty</strong></a>'s AI security portfolio
+</p>
+
+<p align="center">
+  <a href="https://sanjayrkshetty.vercel.app"><img src="https://img.shields.io/badge/Portfolio-Live-00d97e?style=flat-square&logo=vercel&logoColor=white" /></a>
+  &nbsp;
+  <a href="https://linkedin.com/in/sanjay-r-k-shetty-1048ba245"><img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin&logoColor=white" /></a>
+  &nbsp;
+  <a href="https://github.com/sanjayrkshetty"><img src="https://img.shields.io/badge/GitHub-@sanjayrkshetty-181717?style=flat-square&logo=github&logoColor=white" /></a>
+  &nbsp;
+  <a href="mailto:sanjayrkshetty@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square&logo=gmail&logoColor=white" /></a>
+</p>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=80&section=footer" />
+</p>
