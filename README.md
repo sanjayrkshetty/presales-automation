@@ -93,12 +93,11 @@ npm run dev
 - CRUD table for account managers / billing contacts
 - Bulk import via CSV/tab-separated text (upsert by name)
 
-### Dashboard
-- 4 metric cards: total opps, total ACV, hot pipeline ACV, won this month
-- ACV by engagement type (horizontal bar chart)
-- Stage distribution (donut chart)
-- Stale opportunities table
-
+## Dashboard
+- 4 key performance indicator (KPI) cards: total opportunities, total Annual Contract Value (ACV), high-priority pipeline ACV, and won opportunities for the current month
+- ACV distribution by engagement type, visualized through a horizontal bar chart
+- Opportunity stage distribution, represented as a donut chart
+- Table listing stale opportunities, enabling proactive management and mitigation of potential revenue losses
 ### Reports
 - Export to Excel or CSV
 - Filters: date range, stage, engagement type
