@@ -85,3 +85,9 @@ Auto-generated daily activity tracker.
 **Focus:** Pen testing proposal review — verify rules of engagement, IP ranges, exclusions documented.
 
 **Insight:** Prompt injection remains #1 OWASP LLM risk — indirect injection via RAG sources is underdetected.
+
+## 2026-06-01
+
+**Focus:** DFIR retainer renewal — review SLA response times and escalation paths with client.
+
+**Insight:** Jailbreak taxonomy: direct (DAN), indirect (data poisoning), multi-turn (erosion attacks).
